@@ -1,125 +1,226 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>館内案内</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-      background: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    .section {
-      margin: 20px 0;
-      padding: 10px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .section h2 {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 3px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 10px;
-    }
-    td, th {
-      padding: 5px;
-      border: 1px solid #ddd;
-    }
-    .red {
-      color: red;
-    }
-    .small {
-      font-size: 0.9em;
-    }
-    .button-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 5px;
-      margin-top: 10px;
-    }
-    .button {
-      background: #eee;
-      border: 1px solid #aaa;
-      padding: 5px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>館内ごあんない</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        header p {
+            color: #777;
+        }
+
+        .greeting p {
+            margin-bottom: 10px;
+        }
+
+        .floor-guide {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+        }
+
+        .floor-guide h2 {
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            color: #3498db;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 5px;
+            align-items: baseline;
+        }
+
+        .info-row .label {
+            font-weight: bold;
+            margin-right: 10px;
+            width: 100px;
+        }
+
+        .info-row .value {
+            flex-grow: 1;
+        }
+
+        .floor-guide .note {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .floor-guide .note .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .meal-info h2,
+        .wifi-info h2 {
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            color: #27ae60;
+        }
+
+        .meal-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .meal-info li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .meal-info li .icon {
+            font-weight: bold;
+            width: 90px;
+            margin-right: 10px;
+        }
+
+        .wifi-info .info-row {
+            margin-bottom: 8px;
+        }
+
+        .wifi-info .info-row .label {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .wifi-info .info-row .label:first-child {
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .wifi-info .info-row .value {
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>INFORMATION</h1>
+            <p>館内ごあんない</p>
+        </header>
 
-<h1>INFORMATION</h1>
-<p style="text-align: center;">館内のごあんない</p>
-<p>本日はご来館いただき誠にありがとうございます。<br>
-以下の館内案内をご参照の上、ごゆっくりとお過ごしくださいませ。</p>
+        <section class="greeting">
+            <p>本日はご来館いただき誠にありがとうございます。</p>
+            <p>以下の館内案内をご参照の上、ごゆっくりとお過ごしくださいませ。</p>
+        </section>
 
-<div class="section">
-  <h2>6階 大浴場 神明の湯</h2>
-  男女とも　6:00～23:00
-</div>
+        <section class="floor-guide">
+            <h2>6階 大浴場 神明の湯</h2>
+            <div class="info-row">
+                <p class="label">男女とも</p>
+                <p class="value">6:00〜23:00</p>
+            </div>
+        </section>
 
-<div class="section">
-  <h2>屋上 展望露天風呂</h2>
-  <p>男性専用 15:00～18:30<br>
-  <span class="red">7階でエレベーターを降りて階段で屋上へ</span><br>
-  <span class="red">女性専用 19:00～23:00</span><br>
-  男性専用 6:00～10:00</p>
-</div>
+        <section class="floor-guide">
+            <h2>屋上 展望露天風呂</h2>
+            <div class="info-row">
+                <p class="label">女性専用</p>
+                <p class="value">15:00〜18:30</p>
+            </div>
+            <div class="info-row">
+                <p class="label">女性専用</p>
+                <p class="value">19:00〜23:00</p>
+            </div>
+            <div class="info-row">
+                <p class="label">男性専用</p>
+                <p class="value">6:00〜10:00</p>
+            </div>
+            <p class="note">7階でエレベーターを降りて階段で屋上へ</p>
+        </section>
 
-<div class="section">
-  <h2>7階 貸切風呂 福舟</h2>
-  6:00～23:00<br>
-  毎時0分スタートの40分間ご利用です<br>
-  40分 2200円<br>
-  ※チェックイン後に要予約
-</div>
+        <section class="floor-guide">
+            <h2>7階 貸切風呂 福舟</h2>
+            <div class="info-row">
+                <p class="label">時間</p>
+                <p class="value">6:00〜23:00</p>
+            </div>
+            <div class="info-row">
+                <p class="label">備考</p>
+                <p class="value">毎時0分スタートの40分間ご利用です</p>
+            </div>
+            <div class="info-row">
+                <p class="label">料金</p>
+                <p class="value">40分 2200円</p>
+            </div>
+            <p class="note">ご予約時間になりましたらフロントへカギを取りにお越しください<span class="important">※チェックイン後に要予約</span></p>
+        </section>
 
-<div class="section">
-  <h2>御食事・サービス</h2>
-  <div class="button-list">
-    <div class="button">フロント</div>
-    <div class="button">貴重品</div>
-    <div class="button">ルームキー</div>
-    <div class="button">電話</div>
-    <div class="button">チェックアウト</div>
-    <div class="button">マッサージ</div>
-    <div class="button">自動販売機</div>
-    <div class="button">モーニングコール</div>
-    <div class="button">会計</div>
-    <div class="button">喫煙室</div>
-  </div>
-  <ul class="small">
-    <li>電話は内線9番、フロントボタン</li>
-    <li>貴重品はフロント預け、または脱衣場ロッカー</li>
-    <li>ルームキーは外出時フロント預け、就寝時ロック</li>
-    <li>電話 外線は0+番号、内線は部屋番号</li>
-    <li class="red">チェックアウトはAM10:00</li>
-    <li>マッサージはフロントへ</li>
-    <li>自販機 1階/8階 ソフトドリンク・アルコール</li>
-    <li>モーニングコールは部屋電話機で設定</li>
-    <li>会計はチェックアウト時フロント</li>
-    <li class="red">館内禁煙、喫煙室は1階玄関</li>
-  </ul>
-</div>
+        <section class="meal-info">
+            <h2>御食事は</h2>
+            <ul>
+                <li><span class="icon">フロント</span>電話でフロントボタンまたは内線9番</li>
+                <li><span class="icon"></span>ご滞在中のお気づきの点などございましたら、お気軽にお申し付けください</li>
+                <li><span class="icon">貴重品</span>現金や貴重品などはフロントへお預け下さいませ</li>
+                <li><span class="icon"></span>露天風呂、大浴場各脱衣場に貴重品ロッカーございます</li>
+                <li><span class="icon">ルームキー</span>外出の際はフロントへお預けください。お部屋を出られる際、おやすみの際は必ずロックしてください。</li>
+                <li><span class="icon">電 話</span>外線をかけるときは最初に0を回した後相手の電話番号を回してください</li>
+                <li><span class="icon"></span>お部屋同士の通話は相手部屋番号を回してください</li>
+                <li><span class="icon">チェックアウト</span>チェックアウトはAM10：00となっております</li>
+                <li><span class="icon">マッサージ</span>お早めにフロント（9番）へお申し込くださいませ</li>
+                <li><span class="icon">自動販売機</span>1階 ソフトドリンク・アルコール</li>
+                <li><span class="icon"></span>8階 ソフトドリンク・アルコール</li>
+                <li><span class="icon">モーニングコール</span>モーニングコールは電話機にご自由にセットできます</li>
+                <li><span class="icon"></span>モーニングコールボタンを押して、希望時間（例：0630）を押してください</li>
+                <li><span class="icon">会 計</span>チェックアウトの際にルームキーをお持ちいただきフロントにてご精算下さいませ</li>
+                <li><span class="icon">喫煙室</span>館内全て禁煙です。喫煙室は1階玄関にございます</li>
+            </ul>
+        </section>
 
-<div class="section">
-  <h2>Wi-Fi</h2>
-  FREE WI-FI<br>
-  ID: yachiyo<br>
-  PASS: 0877753261
-</div>
-
+        <section class="wifi-info">
+            <h2>Wi-Fi</h2>
+            <div class="info-row">
+                <p class="label">FREE Wi-Fi</p>
+                <p class="label">ID</p>
+                <p class="value">yachiyo</p>
+            </div>
+            <div class="info-row">
+                <p class="label"></p>
+                <p class="label">PASS</p>
+                <p class="value">0877753261</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
